@@ -1,23 +1,21 @@
-// Add your links here
 const myLinks = [
     {
         url: "https://www.google.com",
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png",
-        title: "Google"
+        img: "https://cdn-icons-png.flaticon.com/512/252/252025.png",
+        title: "Google Prox"
     },
     {
         url: "https://www.youtube.com",
-        img: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png",
-        title: "YouTube"
+        img: "https://cdn-icons-png.flaticon.com/512/252/252025.png",
+        title: "YouTube Prox"
     },
     {
         url: "https://www.reddit.com",
-        img: "https://www.redditinc.com/assets/images/site/reddit-logo.png",
-        title: "Reddit"
+        img: "https://cdn-icons-png.flaticon.com/512/252/252025.png",
+        title: "Reddit Prox"
     }
 ];
 
-// This line allows the server (Node.js) to read this file if needed later
 if (typeof module !== 'undefined') {
     module.exports = myLinks;
 }
