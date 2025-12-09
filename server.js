@@ -7,24 +7,21 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
 
-// Serve the current folder so the browser can find index.html and links.js
+// Serve the current folder
 app.use(express.static(__dirname));
 
-// Visitor Counter Variables
 let totalVisits = 0;
 
 io.on('connection', (socket) => {
-    // A user connected
     totalVisits++;
     
-    // Broadcast counts to everyone
+    // Send updates to everyone
     io.emit('updateCounts', { 
         total: totalVisits, 
         online: io.engine.clientsCount 
     });
 
     socket.on('disconnect', () => {
-        // A user disconnected
         io.emit('updateCounts', { 
             total: totalVisits, 
             online: io.engine.clientsCount 
